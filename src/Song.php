@@ -1,6 +1,6 @@
 <?php
 
-class Song
+class Song implements JsonSerializable
 {
     private $id;
     private $name;
@@ -9,13 +9,13 @@ class Song
     private $duration;
 
     /**
-     * @param $id
-     * @param $name
-     * @param $artist
-     * @param $trackNumber
-     * @param $duration
+     * @param int $id
+     * @param string $name
+     * @param string $artist
+     * @param int $trackNumber
+     * @param int $duration
      */
-    public function __construct($id, $name, $artist, $trackNumber, $duration)
+    public function __construct(int $id=0, string $name="Vienna", string $artist="", int $trackNumber=0, int $duration=0)
     {
         $this->id = $id;
         $this->name = $name;
@@ -38,5 +38,10 @@ class Song
     public function getTrackNumber()
     {
         return $this->trackNumber;
+    }
+
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
     }
 }

@@ -27,4 +27,14 @@ class Seeder
             ]),
         ];
     }
+
+    public static function getOSTbyId($id) {
+        foreach (self::generateOSTs() as $soundTrack) {
+            if ($soundTrack->getId() == $id) {
+                return $soundTrack;
+            }
+        }
+
+        return new OST();
+    }
 }
