@@ -23,4 +23,20 @@ class Song
         $this->trackNumber = $trackNumber;
         $this->duration = $duration;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTrackNumber()
+    {
+        return $this->trackNumber;
+    }
 }

@@ -1,4 +1,5 @@
 <?php
+require_once "Song.php";
 
 class OST
 {
@@ -22,5 +23,37 @@ class OST
         $this->game = $game;
         $this->releaseYear = $releaseYear;
         $this->songs = $songs;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getGame()
+    {
+        return $this->game;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getReleaseYear()
+    {
+        return $this->releaseYear;
+    }
+
+    /**
+     * @return array
+     */
+    public function getSongs(): array
+    {
+        return $this->songs;
     }
 }
