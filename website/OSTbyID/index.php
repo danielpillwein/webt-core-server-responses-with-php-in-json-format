@@ -1,5 +1,5 @@
 <?php
-require_once "../src/Seeder.php";
+require_once "../../src/Seeder.php";
 
 $request_OST =  $_GET["id"];
 
