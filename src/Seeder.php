@@ -35,6 +35,6 @@ class Seeder
             }
         }
 
-        return new OST();
+        return null;
     }
 }

@@ -2,11 +2,11 @@
 
 class Song implements JsonSerializable
 {
-    private $id;
-    private $name;
-    private $artist;
-    private $trackNumber;
-    private $duration;
+    private int $id;
+    private string $name;
+    private string $artist;
+    private int $trackNumber;
+    private int $duration;
 
     /**
      * @param int $id

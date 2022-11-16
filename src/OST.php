@@ -3,11 +3,11 @@ require_once "Song.php";
 
 class OST implements JsonSerializable
 {
-    private $id;
-    private $name;
-    private $game;
-    private $releaseYear;
-    private $songs = [];
+    private int $id;
+    private string $name;
+    private string $game;
+    private int $releaseYear;
+    private array $songs = [];
 
     /**
      * @param int $id
